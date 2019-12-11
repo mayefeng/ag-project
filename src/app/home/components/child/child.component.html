@@ -1,0 +1,4 @@
+<span [textContent]='title'></span>
+<div #timeRef></div>
+<div [textContent]='time | date: "HH:mm:ss:SSS"'></div>
+<button (click)='handleClick()'>触发脏值检测</button>

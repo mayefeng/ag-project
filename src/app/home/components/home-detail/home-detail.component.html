@@ -1,0 +1,25 @@
+<div #my>123</div>
+<input type="text" [(ngModel)]='name'>
+<div *ngIf='(selectedTabLink$ | async) === "hot" else other'>
+  <app-image-slider [sliders]='imageSliders$ | async' #imageSlider></app-image-slider>
+  <app-horizonal-grid [(username)]='username'>
+    <div appGridItem *ngFor='let item of channels$ | async'>
+      <img [src]="item.icon" appGridItemImage='2rem'>
+      <span appGridItemTitle="0.6rem" class='title'>{{ item.title }}</span>
+    </div>
+    <span>
+      <span appGridItemImage='2rem' style='background-color: red'></span>
+      <span appGridItemTitle="0.6rem"></span>
+    </span>
+  </app-horizonal-grid>
+</div>
+<ng-template #other>
+  Other works
+</ng-template>
+<!-- <a [routerLink]="[ 'grand']">link to grand</a> -->
+<a [routerLink]="[ 'grand' ]" routerLinkActive="active" [queryParams]='{name: "zhangsan", gender: "male"}'>link to grand</a>
+<a [routerLink]="[{outlets: {second: ['aux']}}]" >link to aux</a>
+<router-outlet></router-outlet>
+<router-outlet name="second"></router-outlet>
+
+

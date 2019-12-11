@@ -1,0 +1,23 @@
+<!-- <input type="text" [value]='username' (input)='username = $event.target.value'> -->
+<!-- <input type="text" [(ngModel)]='username'> -->
+<!-- <input type="text" [value]='username' (input)='username = $event.target.value'>
+<span (click)='handleClick()'>你好{{ username }}</span>
+{{result}} -->
+<!-- <div appGridItem *ngFor='let item of channels'>
+	<img [src]="item.icon" appGridItemImage='2rem'>
+	<span appGridItemTitle="0.6rem" class='title'>{{ item.title }}</span>
+</div> -->
+<!-- <ng-content select='div'></ng-content> -->
+<!-- <ng-content select='.special'></ng-content> -->
+<!-- <ng-content select='[appGridItem]'></ng-content>
+<ng-content select='span'></ng-content> -->
+<div 
+	class='container' 
+	[ngStyle]='{"grid-template-rows": templateRows, "grid-template-columns": templateColumns}'
+	(scroll)='handleScroll($event)'
+>
+	<ng-content select='[appGridItem]'></ng-content>
+</div>
+<div class="underline" *ngIf="scrollable">
+	<div class="highlight" [ngStyle]='{"margin": sliderMargin}'></div>
+</div>

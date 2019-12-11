@@ -1,0 +1,22 @@
+<!-- <app-scrollable-tab 
+  [menus]='topMenus' 
+  [backgroundColor]='scrollableTabBgColor'
+  titleColor='#fff'
+  titleActiveColor='yellow'
+  indicatorColor='yellow'
+  (tabSelected)='handleTabSelected($event)'
+  *ngIf='scrollableTabBgColor === "red"'
+  >
+ </app-scrollable-tab>
+ <app-image-slider [sliders]='imageSliders' #imageSlider></app-image-slider>
+<app-horizonal-grid [(username)]='username'>
+  <div appGridItem *ngFor='let item of channels'>
+    <img [src]="item.icon" appGridItemImage='2rem'>
+    <span appGridItemTitle="0.6rem" class='title'>{{ item.title }}</span>
+  </div>
+  <span>
+    <span appGridItemImage='2rem' style='background-color: red'></span>
+    <span appGridItemTitle="0.6rem"></span>
+  </span>
+</app-horizonal-grid> -->
+<router-outlet></router-outlet> 
